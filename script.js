@@ -63,7 +63,7 @@ var mes = meses.options[meses.selectedIndex].value;
 var inicio = prompt("Dia de Inicio");
 var fin=prompt("Dia Fin")
 
-popUp = "http://wsalud.minsa.gob.pe/reporteshis/Inmunizaciones/Vacunados.aspx?parametro=112-17-02-" + mic + "-" + ess + "-0-" + inicio + "/" + mes + "/2020-" + fin + "/" + mes + "/2020";
+popUp = "https://wsalud.minsa.gob.pe/reporteshis/Inmunizaciones/Vacunados.aspx?parametro=112-17-02-" + mic + "-" + ess + "-0-" + inicio + "/" + mes + "/2020-" + fin + "/" + mes + "/2020";
 document.getElementById('miframe').src = popUp;
 
 
