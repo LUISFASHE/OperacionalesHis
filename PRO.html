@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+
+<body>
+    <h1>M.R. Margen Izquierda</h1>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-2">
+
+
+                <div class="form-group">
+                    <label>Año</label>
+                    <input class="form-control" type="text" value="2020" disabled />
+                </div>
+                <div class="form-group">
+                    <label for="mes">Mes:</label>
+                    <select class="form-control" id="mes">
+
+                        <option value="01">Enero</option>
+                        <option value="02">Febrero</option>
+                        <option value="03">Marzo</option>
+                        <option value="04">Abril</option>
+                        <option value="05">Mayo</option>
+                        <option value="06">Junio</option>
+                        <option value="07">Julio</option>
+                        <option value="08">Agosto</option>
+                        <option value="09">Setiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Red</label>
+                    <input class="form-control" type="text" value="RED JAUJA" disabled />
+                </div>
+
+                <div class="form-group">
+                    <label for="micro">Microred:</label>
+                    <select class="form-control" id="micro">
+                        <option value="00">D.Olavegoya</option>
+                        <option value="01">Hatun Xauxa</option>
+                        <option value="02">Yanamarca</option>
+                        <option value="03">Quebrada del Mantaro</option>
+                        <option value="04">Yauli la Oroya</option>
+                        <option value="05">Margen Izquierda</option>
+                        <option value="06">Valle Azul</option>
+                        <option value="07">Margen Derecha</option>
+                        <option value="08">Valle Yacus</option>
+                        <option selected="true" value=""></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="eess">Ipress:</label>
+                    <select class="form-control" id="eess"></select>
+
+                </div>
+
+                <div class="form-group">
+                    <input class="btn btn-info" type="button" id="dx" name="dx" onclick="open_personal();" value="Maestro_Personal" />
+                </div>
+
+
+
+                <div class="form-group">
+                    <input class="btn btn-info" type="button" id="nm" name="nm" onclick="open_registrador();" value="Maestro_Registra" />
+                </div>
+
+                <div class="form-group">
+                    <input class="btn btn-info" type="button" id="nm" name="nm" onclick="open_paciente();" value="Maestro_Paciente" />
+                </div>
+
+                
+                <div class="form-group">
+                    <input class="btn btn-info" type="button" id="nm" name="nm" onclick="open_archivo_plano();" value="N_Archivo_Plano_" />
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <input class="btn btn-primary" type="button" id="vacunas" name="vacunas" onclick="open_vacunas();" value="BDVacunas" />
+                </div>
+                    
+
+
+                <div class="form-group">
+                    <input class="btn btn-success" type="button" id="reporte" name="reporte" onclick="open_reports();" value="Reportes" />
+                </div>
+
+
+                   
+            </div>
+            <div class="col-md-3">
+                
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="adultomayor">
+                    <label class="custom-control-label" for="adultomayor">reportAdultoMayor</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="cancer">
+                    <label class="custom-control-label" for="cancer">reportCancer</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="esni">
+                    <label class="custom-control-label" for="esni">reportEsni</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="atenciones">
+                    <label class="custom-control-label" for="atenciones">reportGeneraAtcyAtd</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="joven">
+                    <label class="custom-control-label" for="joven">reportJoven</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="morbilidad">
+                    <label class="custom-control-label" for="morbilidad">reportGeneralMorbilidad</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="materno">
+                    <label class="custom-control-label" for="materno">reportMaterno</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="nino">
+                    <label class="custom-control-label" for="nino">reportNino</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="notransmisibles">
+                    <label class="custom-control-label" for="notransmisibles">reportNoTrasmisible</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="nutricion">
+                    <label class="custom-control-label" for="nutricion">reportNutricion</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="plani">
+                    <label class="custom-control-label" for="plani">reportPlanificacionFamiliar</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="mental">
+                    <label class="custom-control-label" for="mental">reportSaludMental</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="tbc">
+                    <label class="custom-control-label" for="tbc">reportTBC</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="vih">
+                    <label class="custom-control-label" for="vih">reportVIH</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="adulto">
+                    <label class="custom-control-label" for="adulto">reportAdulto</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="adolescente">
+                    <label class="custom-control-label" for="adolescente">reportAdolescente</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="bucal">
+                    <label class="custom-control-label" for="bucal">reportSaludBucal</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" name="customRadio" id="familiar">
+                    <label class="custom-control-label" for="familiar">reportSaludFamiliar</label>
+                </div>
+                
+                
+            </div>
+            <div class="col-md-7">
+               <h2 id="descripcion">Report:</h2>
+                <iframe src="https://websalud.minsa.gob.pe/hisminsa/shared/banner.png" frameborder="1" width="900" height="605" id="miframe"><h1>Aqui va el Report</h1></iframe>
+            </div>
+
+        </div>
+
+        <br />
+        
+        <footer>
+            <p id="nota">l_Fashe..... &copy;luighy15@hotmail.com</p>
+        </footer>
+       
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+   
+    
+</body>
+
+</html>
