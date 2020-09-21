@@ -70,7 +70,7 @@ document.getElementById('miframe').src = popUp;
 }
 function open_personal()
 {
-document.getElementById('miframe').src ="";
+
 let f=new Date();
 var microred = document.getElementById("micro");
 var mic = microred.options[microred.selectedIndex].value;
@@ -106,7 +106,7 @@ else {
 
 function open_registrador()
 {
-document.getElementById('miframe').src ="blank.html";
+
 let f=new Date();
 var microred = document.getElementById("micro");
 var mic = microred.options[microred.selectedIndex].value;
@@ -142,7 +142,7 @@ else {
 function open_paciente()
 {
 
-document.getElementById('miframe').src="";
+
 let f=new Date();
 var microred = document.getElementById("micro");
 var mic = microred.options[microred.selectedIndex].value;
@@ -154,8 +154,7 @@ var ess = ipress.options[ipress.selectedIndex].value;
 var meses = document.getElementById("mes");
 var mes = meses.options[meses.selectedIndex].value;
 var variable = '';
-if (mes === "") { alert("Ingrese Mes"); }
-else {
+
     // var inicio = prompt("Dia de Inicio");
     // var fin = prompt("Dia Fin")
     if (mic === "00") { variable = "892"; }
@@ -171,7 +170,7 @@ else {
     var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPaciente.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+"0"+f.getDate()+"-2020"+mes+"0"+f.getDate()+"-";
     document.getElementById('miframe').src = popUp;
     document.getElementById('descripcion').textContent="Maestro_Paciente";
-}
+
 }
 
 
@@ -185,7 +184,7 @@ else {
 
 function open_archivo_plano()
 {
-document.getElementById('miframe').src ="";
+
 var microred = document.getElementById("micro");
 var mic = microred.options[microred.selectedIndex].value;
 
@@ -196,8 +195,7 @@ var ess = ipress.options[ipress.selectedIndex].value;
 var meses = document.getElementById("mes");
 var mes = meses.options[meses.selectedIndex].value;
 var variable='';
-if (mes === "") { alert("Ingrese Mes"); }
-else {
+
     var inicio = prompt("Dia de Inicio");
     var fin = prompt("Dia Fin");
     if (mic === "00") { variable = "892"; }
@@ -212,7 +210,7 @@ else {
     var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/NominalTramaNuevo.aspx?parametro=7-17-02-"+mic+"--"+variable+"-2020"+mes+""+inicio+"-2020"+mes+""+fin+"";
     document.getElementById('miframe').src = popUp;
     document.getElementById('descripcion').textContent="Maestro_Nominal_Trama_Nuevo";
-}
+
 }
 
 
