@@ -71,7 +71,7 @@ document.getElementById('descripcion').textContent="Vacunas";
 function open_personal()
 {
 
-let f=new Date();
+
 var microred = document.getElementById("micro");
 var mic = microred.options[microred.selectedIndex].value;
 
@@ -96,7 +96,7 @@ else {
     if (mic === "07") { variable = "894"; }
     if (mic === "08") { variable = "895" };
     //var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/NominalTramaTodo.aspx?parametro=7-17-02-" + mic + "--" + variable + "-2020" + mes + "" + inicio + "-2020" + mes + "" + fin + "";
-    var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPersonal.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+"0"+f.getDate()+"-2020"+mes+"0"+f.getDate()+"-";
+    var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPersonal.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+""+dia+"-2020"+mes+""+dia+"-";
     document.getElementById('miframe').src = popUp;
     document.getElementById('descripcion').textContent="Maestro_Personal";
     //window.open("https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPersonal.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+"0"+f.getDate()+"-2020"+mes+"0"+f.getDate()+"-");
@@ -107,7 +107,7 @@ else {
 function open_registrador()
 {
 
-let f=new Date();
+
 var microred = document.getElementById("micro");
 var mic = microred.options[microred.selectedIndex].value;
 
@@ -132,7 +132,7 @@ else {
     if (mic === "07") { variable = "894"; }
     if (mic === "08") { variable = "895" };
     //var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/NominalTramaTodo.aspx?parametro=7-17-02-" + mic + "--" + variable + "-2020" + mes + "" + inicio + "-2020" + mes + "" + fin + "";
-    var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroRegistrador.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+"0"+f.getDate()+"-2020"+mes+"0"+f.getDate()+"-";
+    var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroRegistrador.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+""+dia+"-2020"+mes+""+dia+"-";
     document.getElementById('miframe').src = popUp;
     document.getElementById('descripcion').textContent="Maestro_Registrador";
    
@@ -143,7 +143,7 @@ function open_paciente()
 {
 
 
-let f=new Date();
+
 var microred = document.getElementById("micro");
 var mic = microred.options[microred.selectedIndex].value;
 
@@ -167,7 +167,7 @@ var variable = '';
     if (mic === "07") { variable = "894"; }
     if (mic === "08") { variable = "895" };
     //var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/NominalTramaTodo.aspx?parametro=7-17-02-" + mic + "--" + variable + "-2020" + mes + "" + inicio + "-2020" + mes + "" + fin + "";
-    var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPaciente.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+"0"+f.getDate()+"-2020"+mes+"0"+f.getDate()+"-";
+    var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPaciente.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+""+dia+"-2020"+mes+""+dia+"-";
     document.getElementById('miframe').src = popUp;
     document.getElementById('descripcion').textContent="Maestro_Paciente";
 
@@ -217,7 +217,7 @@ var variable='';
 
 var meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre"]
 var d = new Date();
-
+var dia=d.getDate();
 if (d.getMonth() === 0) { document.ready = document.getElementById("mes").value = "01"; }
 if (d.getMonth() === 1) { document.ready = document.getElementById("mes").value = "02"; }
 if (d.getMonth() === 2) { document.ready = document.getElementById("mes").value = "03"; }
@@ -230,6 +230,18 @@ if (d.getMonth() === 8) { document.ready = document.getElementById("mes").value 
 if (d.getMonth() === 9) { document.ready = document.getElementById("mes").value = "10"; }
 if (d.getMonth() === 10){ document.ready = document.getElementById("mes").value = "11"; }
 if (d.getMonth() === 11){ document.ready = document.getElementById("mes").value = "12"; }
+
+
+if (dia === 1) { dia = "01"; }
+if (dia === 2) { dia = "02"; }
+if (dia === 3) { dia = "03"; }
+if (dia === 4) { dia = "04"; }
+if (dia === 5) { dia = "05"; }
+if (dia === 6) { dia = "06"; }
+if (dia === 7) { dia = "07"; }
+if (dia === 8) { dia = "08"; }
+if (dia === 9) { dia = "09"; }
+
 
 
 $("#reporte").on('click',function(){
