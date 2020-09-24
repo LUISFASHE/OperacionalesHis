@@ -35,6 +35,9 @@ function open_reports() {
             if (document.getElementById("adolescente").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportAdolescente"; document.getElementById('descripcion').textContent="reportAdolescente";}
             if (document.getElementById("bucal").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludBucal"; document.getElementById('descripcion').textContent="reportSaludBucal";}
             if (document.getElementById("familiar").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludFamiliar"; document.getElementById('descripcion').textContent="reportSaludFamiliar";}
+    
+            if (document.getElementById("metaxenica").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMetaxenica"; document.getElementById('descripcion').textContent="reportMetaxenica";}
+            if (document.getElementById("alternativa").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMedicinaAlternativa"; document.getElementById('descripcion').textContent="reportMedicinaAlternativa";}
 
            
              document.getElementById('miframe').src = popUp;
