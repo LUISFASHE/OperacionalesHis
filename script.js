@@ -1,6 +1,6 @@
 
 function open_reports() {
-    
+    let titulo="";
     var microred = document.getElementById("micro");
     var mic = microred.options[microred.selectedIndex].value;
 
@@ -16,31 +16,34 @@ function open_reports() {
     
        
            
-            if (document.getElementById("adultomayor").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportAdultoMayor"; document.getElementById('descripcion').textContent="reportAdultoMayor";}
-            if (document.getElementById("cancer").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportCancer"; document.getElementById('descripcion').textContent="reportCancer";}
-            if (document.getElementById("esni").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportEsni"; document.getElementById('descripcion').textContent="reportEsni";}
-            if (document.getElementById("atenciones").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportGeneraAtcyAtd"; document.getElementById('descripcion').textContent="reportGeneraAtcyAtd";}
-            if (document.getElementById("joven").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportJoven"; document.getElementById('descripcion').textContent="reportJoven";}
-            if (document.getElementById("morbilidad").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportGeneralMorbilidad"; document.getElementById('descripcion').textContent="reportGeneralMorbilidad";}
-            if (document.getElementById("materno").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMaterno"; document.getElementById('descripcion').textContent="reportMaterno";}
+            if (document.getElementById("adultomayor").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportAdultoMayor"; titulo="reportAdultoMayor";}
+            if (document.getElementById("cancer").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportCancer"; titulo="reportCancer";}
+            if (document.getElementById("esni").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportEsni"; titulo="reportEsni";}
+            if (document.getElementById("atenciones").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportGeneraAtcyAtd"; titulo="reportGeneraAtcyAtd";}
+            if (document.getElementById("joven").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportJoven"; titulo="reportJoven";}
+            if (document.getElementById("morbilidad").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportGeneralMorbilidad"; titulo="reportGeneralMorbilidad";}
+            if (document.getElementById("materno").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMaterno"; titulo="reportMaterno";}
                                                                      
-            if (document.getElementById("nino").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportNino"; document.getElementById('descripcion').textContent="reportNino";}
-            if (document.getElementById("notransmisibles").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportNoTrasmisible"; document.getElementById('descripcion').textContent="reportNoTrasmisible";}
-            if (document.getElementById("nutricion").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportNutricion"; document.getElementById('descripcion').textContent="reportNutricion";}
-            if (document.getElementById("plani").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportPlanificacionFamiliar";document.getElementById('descripcion').textContent="reportPlanificacionFamiliar"; }
-            if (document.getElementById("mental").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludMental";document.getElementById('descripcion').textContent="reportSaludMental"; }
-            if (document.getElementById("tbc").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportTBC"; document.getElementById('descripcion').textContent="reportTBC";}
-            if (document.getElementById("vih").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportVIH"; document.getElementById('descripcion').textContent="reportVIH";}
-            if (document.getElementById("adulto").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportAdulto";document.getElementById('descripcion').textContent="reportAdulto"; }
-            if (document.getElementById("adolescente").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportAdolescente"; document.getElementById('descripcion').textContent="reportAdolescente";}
-            if (document.getElementById("bucal").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludBucal"; document.getElementById('descripcion').textContent="reportSaludBucal";}
-            if (document.getElementById("familiar").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludFamiliar"; document.getElementById('descripcion').textContent="reportSaludFamiliar";}
+            if (document.getElementById("nino").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportNino"; titulo="reportNino";}
+            if (document.getElementById("notransmisibles").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportNoTrasmisible"; titulo="reportNoTrasmisible";}
+            if (document.getElementById("nutricion").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportNutricion"; titulo="reportNutricion";}
+            if (document.getElementById("plani").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportPlanificacionFamiliar";titulo="reportPlanificacionFamiliar"; }
+            if (document.getElementById("mental").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludMental";titulo="reportSaludMental"; }
+            if (document.getElementById("tbc").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportTBC"; titulo="reportTBC";}
+            if (document.getElementById("vih").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportVIH"; titulo="reportVIH";}
+            if (document.getElementById("adulto").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportAdulto";titulo="reportAdulto"; }
+            if (document.getElementById("adolescente").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportAdolescente";titulo="reportAdolescente";}
+            if (document.getElementById("bucal").checked) {popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludBucal"; titulo="reportSaludBucal";}
+            if (document.getElementById("familiar").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludFamiliar"; titulo="reportSaludFamiliar";}
     
-            if (document.getElementById("metaxenica").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMetaxenica"; document.getElementById('descripcion').textContent="reportMetaxenica";}
-            if (document.getElementById("alternativa").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMedicinaAlternativa"; document.getElementById('descripcion').textContent="reportMedicinaAlternativa";}
+            if (document.getElementById("metaxenica").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMetaxenica"; titulo="reportMetaxenica";}
+            if (document.getElementById("alternativa").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMedicinaAlternativa"; titulo="reportMedicinaAlternativa";}
 
            
              document.getElementById('miframe').src = popUp;
+             document.getElementById('miframe').onload=function(){
+                document.getElementById('descripcion').textContent=titulo;  
+            }
             
            
     
