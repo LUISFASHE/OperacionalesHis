@@ -68,7 +68,10 @@ var fin=prompt("Dia Fin")
 
 popUp = "https://wsalud.minsa.gob.pe/reporteshis/Inmunizaciones/Vacunados.aspx?parametro=112-17-02-" + mic + "-" + ess + "-0-" + inicio + "/" + mes + "/2020-" + fin + "/" + mes + "/2020";
 document.getElementById('miframe').src = popUp;
-document.getElementById('descripcion').textContent="Vacunas";
+document.getElementById('descripcion').textContent="Procesando...Espere";
+document.getElementById('miframe').onload=function(){
+    document.getElementById('descripcion').textContent="Vacunas";  
+}
 
 }
 function open_personal()
@@ -101,7 +104,10 @@ else {
     //var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/NominalTramaTodo.aspx?parametro=7-17-02-" + mic + "--" + variable + "-2020" + mes + "" + inicio + "-2020" + mes + "" + fin + "";
     var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPersonal.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+""+dia+"-2020"+mes+""+dia+"-";
     document.getElementById('miframe').src = popUp;
-    document.getElementById('descripcion').textContent="Maestro_Personal";
+    document.getElementById('descripcion').textContent="Procesando...Espere";
+document.getElementById('miframe').onload=function(){
+    document.getElementById('descripcion').textContent="Maestro_Personal";  
+}
     //window.open("https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPersonal.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+"0"+f.getDate()+"-2020"+mes+"0"+f.getDate()+"-");
 }
 }
@@ -137,7 +143,10 @@ else {
     //var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/NominalTramaTodo.aspx?parametro=7-17-02-" + mic + "--" + variable + "-2020" + mes + "" + inicio + "-2020" + mes + "" + fin + "";
     var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroRegistrador.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+""+dia+"-2020"+mes+""+dia+"-";
     document.getElementById('miframe').src = popUp;
-    document.getElementById('descripcion').textContent="Maestro_Registrador";
+    document.getElementById('descripcion').textContent="Procesando...Espere";
+    document.getElementById('miframe').onload=function(){
+    document.getElementById('descripcion').textContent="Maestro_Registrador";  
+    }
    
 }
 }
@@ -172,7 +181,10 @@ var variable = '';
     //var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/NominalTramaTodo.aspx?parametro=7-17-02-" + mic + "--" + variable + "-2020" + mes + "" + inicio + "-2020" + mes + "" + fin + "";
     var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/ExportarMaestroPaciente.aspx?parametro="+variable+"-17-02-"+mic+"-2020"+mes+""+dia+"-2020"+mes+""+dia+"-";
     document.getElementById('miframe').src = popUp;
-    document.getElementById('descripcion').textContent="Maestro_Paciente";
+   document.getElementById('descripcion').textContent="Procesando...Espere";
+    document.getElementById('miframe').onload=function(){
+    document.getElementById('descripcion').textContent="Maestro_Paciente";  
+    }
 
 }
 
@@ -212,7 +224,11 @@ var variable='';
     if (mic === "08") { variable = "895" };
     var popUp = "https://wsalud.minsa.gob.pe/reporteshis/his/NominalTramaNuevo.aspx?parametro=7-17-02-"+mic+"--"+variable+"-2020"+mes+""+inicio+"-2020"+mes+""+fin+"";
     document.getElementById('miframe').src = popUp;
-    document.getElementById('descripcion').textContent="Maestro_Nominal_Trama_Nuevo";
+   
+    document.getElementById('descripcion').textContent="Procesando...Espere";
+    document.getElementById('miframe').onload=function(){
+    document.getElementById('descripcion').textContent="Maestro_Nominal_Trama_Nuevo";  
+    }
 
 }
 
