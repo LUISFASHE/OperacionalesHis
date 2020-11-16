@@ -38,6 +38,11 @@ function open_reports() {
     
             if (document.getElementById("metaxenica").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMetaxenica"; titulo="reportMetaxenica";}
             if (document.getElementById("alternativa").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportMedicinaAlternativa"; titulo="reportMedicinaAlternativa";}
+    
+            if (document.getElementById("reportPromsa").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportPromsa_PP"; titulo="reportPromsa_PP";}
+            if (document.getElementById("reportSaludOcular").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludOcular"; titulo="reportSaludOcular";}
+            if (document.getElementById("reportSaludOcular2019").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportSaludOcular2019"; titulo="reportSaludOcular2019";}
+            if (document.getElementById("reportNoTrasmisible2020").checked) { popUp="https://webapp.minsa.gob.pe/reporthisdw/reportdw.aspx?pReporte=17-02-" + mic + "-" + ess + "---2020-" + mes + "-reportNoTrasmisible2020"; titulo="reportNoTrasmisible2020";}
 
            
              document.getElementById('miframe').src = popUp;
