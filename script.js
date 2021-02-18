@@ -91,6 +91,41 @@ document.getElementById('miframe').onload=function(){
 }
 
 }
+
+function covid19() 
+{
+
+var anos = document.getElementById("anio");
+var anios = anos.options[anos.selectedIndex].value;    
+
+
+var microred = document.getElementById("micro");
+var mic = microred.options[microred.selectedIndex].value;
+
+
+var ipress = document.getElementById("eess");
+var ess = ipress.options[ipress.selectedIndex].value;
+
+var meses = document.getElementById("mes");
+var mes = meses.options[meses.selectedIndex].value;
+
+
+
+var inicio = prompt("Dia de Inicio");
+var fin=prompt("Dia Fin")
+  popUp = "https://wsalud.minsa.gob.pe/reporteshis/Inmunizaciones/Vacunados.aspx?parametro=127-17-02-" + mic +"-"+ess+"-0-"+inicio+"/"+mes+"/"+anios+"-"+fin+"/"+mes+"/"+anios+""; 
+//popUp = "https://wsalud.minsa.gob.pe/reporteshis/Inmunizaciones/Vacunados.aspx?parametro=127-17-02-" + mic + "-" + ess + "-0-" + inicio + "/" + mes + "/"+anios+"-" + fin + "/" + mes + "/"+anios+"";
+document.getElementById('miframe').src = popUp;
+document.getElementById('descripcion').textContent="Procesando...Espere";
+document.getElementById('miframe').onload=function(){
+    document.getElementById('descripcion').textContent="Vacunas_Covid19";  
+}
+
+}
+
+
+
+
 function open_personal()
 {
 
